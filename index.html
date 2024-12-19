@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
 
   <title>Frontend Mentor | Contact form</title>
-
+  <link rel="stylesheet" href="./styles.css">
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
@@ -25,13 +25,17 @@
 
 <body>
   <main>
-    <div class="card">
+    <div success class="card">
       <div class="success">
+        <div class="img_box">
+          <img src="./assets/images/icon-success-check.svg" alt="success">
+          Message Sent!
+        </div>
         <h2>Thanks for completing the form. We'll be in touch soon!</h2>
       </div>
       <h1>Contact Us</h1>
       <form role="form" aria-label="Contact Form" action="#">
-        <fieldset role="group" aria-labelledby="first_name_label" class="form_group col-6">
+        <fieldset error role="group" aria-labelledby="first_name_label" class="form_group col-6">
           <label id="first_name_label" for="first_name">
             First Name *
           </label>
@@ -52,23 +56,28 @@
           <input type="email" name="email" id="email" class="form_control" aria-required="true">
           <span class="error" aria-live="polite"> This field is required </span>
         </fieldset>
-        <fieldset role="radiogroup" aria-labelledby="query_label" class="form_group col-12">
+        <fieldset role="radiogroup" aria-labelledby="query_label" class="form_group col-12 row">
           <legend id="query_label"> Query Type *</legend>
-          <label for="ge">
-            General Enquiry
-            <input type="radio" role="radio" tabindex="0" id="ge" name="qt" class="form_control" aria-required="true">
-            <span class="error" aria-live="polite"> Please select a query type </span>
-          </label>
-          <label for="sp">
-            General Enquiry
-            <input type="radio" role="radio" tabindex="0" id="sp" name="qt" class="form_control">
-          </label>
+          <fieldset class="form_group col-6">
+            <label for="ge">
+              <input type="radio" role="radio" tabindex="0" id="ge" name="qt" class="form_control" aria-required="true">
+              General Enquiry
+            </label>
+          </fieldset>
+          <fieldset class="form_group col-6">
+            <label for="sp">
+              <input type="radio" role="radio" tabindex="0" id="sp" name="qt" class="form_control">
+              Support Request
+            </label>
+          </fieldset>
+          <span class="error" aria-live="polite"> Please select a query type </span>
+
         </fieldset>
         <fieldset role="group" aria-labelledby="content_label" class="form_group col-12">
           <label id="content_label" for="content">
             Message *
           </label>
-          <textarea id="content" name="content" class="form_control" aria-required="true"></textarea>
+          <textarea rows="5" id="content" name="content" class="form_control" aria-required="true"></textarea>
           <span class="error" aria-live="polite"> This field is required </span>
         </fieldset>
         <fieldset role="group" aria-labelledby="contact_label" class="form_group col-12">
@@ -83,8 +92,6 @@
       </form>
     </div>
   </main>
-
-
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="https://www.frontendmentor.io/profile/TranDanh1122">TRần Danh</a>.
