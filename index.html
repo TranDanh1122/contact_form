@@ -25,7 +25,7 @@
 
 <body>
   <main>
-    <div success class="card">
+    <div  class="card">
       <div class="success">
         <div class="img_box">
           <img src="./assets/images/icon-success-check.svg" alt="success">
@@ -34,8 +34,8 @@
         <h2>Thanks for completing the form. We'll be in touch soon!</h2>
       </div>
       <h1>Contact Us</h1>
-      <form role="form" aria-label="Contact Form" action="#">
-        <fieldset error role="group" aria-labelledby="first_name_label" class="form_group col-6">
+      <form role="form" aria-label="Contact Form" action="#" novalidate>
+        <fieldset role="group" aria-labelledby="first_name_label" class="form_group col-6">
           <label id="first_name_label" for="first_name">
             First Name *
           </label>
@@ -63,6 +63,8 @@
               <input type="radio" role="radio" tabindex="0" id="ge" name="qt" class="form_control" aria-required="true">
               General Enquiry
             </label>
+            <span class="error" aria-live="polite"> Please select a query type </span>
+
           </fieldset>
           <fieldset class="form_group col-6">
             <label for="sp">
@@ -70,8 +72,6 @@
               Support Request
             </label>
           </fieldset>
-          <span class="error" aria-live="polite"> Please select a query type </span>
-
         </fieldset>
         <fieldset role="group" aria-labelledby="content_label" class="form_group col-12">
           <label id="content_label" for="content">
@@ -96,6 +96,7 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
     Coded by <a href="https://www.frontendmentor.io/profile/TranDanh1122">TRần Danh</a>.
   </div>
+  <script src="./script.js"></script>
 </body>
 
 </html>
