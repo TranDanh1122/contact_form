@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Contact form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="card">
+      <div class="success">
+        <h2>Thanks for completing the form. We'll be in touch soon!</h2>
+      </div>
+      <h1>Contact Us</h1>
+      <form role="form" aria-label="Contact Form" action="#">
+        <fieldset role="group" aria-labelledby="first_name_label" class="form_group col-6">
+          <label id="first_name_label" for="first_name">
+            First Name *
+          </label>
+          <input type="text" name="first_name" id="first_name" class="form_control" aria-required="true">
+          <span class="error" aria-live="polite"> This field is required </span>
+        </fieldset>
+        <fieldset role="group" aria-labelledby="last_name_label" class="form_group col-6">
+          <label id="last_name_label" for="last_name">
+            Last Name
+          </label>
+          <input type="text" name="last_name" id="last_name" class="form_control">
+          <span class="error" aria-live="polite"> This field is required </span>
+        </fieldset>
+        <fieldset role="group" aria-labelledby="email_label" class="form_group col-12">
+          <label id="email_label" for="email">
+            Email Address *
+          </label>
+          <input type="email" name="email" id="email" class="form_control" aria-required="true">
+          <span class="error" aria-live="polite"> This field is required </span>
+        </fieldset>
+        <fieldset role="radiogroup" aria-labelledby="query_label" class="form_group col-12">
+          <legend id="query_label"> Query Type *</legend>
+          <label for="ge">
+            General Enquiry
+            <input type="radio" role="radio" tabindex="0" id="ge" name="qt" class="form_control" aria-required="true">
+            <span class="error" aria-live="polite"> Please select a query type </span>
+          </label>
+          <label for="sp">
+            General Enquiry
+            <input type="radio" role="radio" tabindex="0" id="sp" name="qt" class="form_control">
+          </label>
+        </fieldset>
+        <fieldset role="group" aria-labelledby="content_label" class="form_group col-12">
+          <label id="content_label" for="content">
+            Message *
+          </label>
+          <textarea id="content" name="content" class="form_control" aria-required="true"></textarea>
+          <span class="error" aria-live="polite"> This field is required </span>
+        </fieldset>
+        <fieldset role="group" aria-labelledby="contact_label" class="form_group col-12">
+          <label id="contact_label" for="contact">
+            <input type="checkbox" name="contact" id="contact">
+            I consent to being contacted by the team
+          </label>
+          <span class="error" aria-live="polite"> To submit this form, please consent to being contacted Message
+            Sent!</span>
+        </fieldset>
+        <input role="button" type="submit" class="submit_btn" value="Submit">
+      </form>
+    </div>
+  </main>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+    Coded by <a href="https://www.frontendmentor.io/profile/TranDanh1122">TRần Danh</a>.
+  </div>
+</body>
+
+</html>
